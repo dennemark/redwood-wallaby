@@ -1,4 +1,22 @@
-# README
+this project uses prisma-erm-generator.
+to get it running:
+1. `yarn install`
+2. `yarn rw prisma db push`
+and now wallaby should be able to start already
+but it will throw error:
+`Error: spawn prisma-erd-generator ENOENT `
+prisma-erd-generator is used in file schema.prisma. when it is removed, tests run properly.
+there is one additional configuration to run tests on api side in line 7 of api/jest.config.js
+`if (process.env.DEBUG?.includes('wallaby')) config.runner = 'jest-runner'`
+taken from here from redwoodjs core team: `https://community.redwoodjs.com/t/testing-your-api-with-wallaby/2871`
+
+
+
+
+
+
+
+# OFFICIAL README
 
 Welcome to [RedwoodJS](https://redwoodjs.com)!
 
