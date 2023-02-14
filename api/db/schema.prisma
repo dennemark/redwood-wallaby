@@ -8,6 +8,11 @@ generator client {
   binaryTargets = "native"
 }
 
+generator erd {
+  provider = "prisma-erd-generator"
+  output   = ".ERD.svg"
+}
+
 // Define your own datamodels here and run `yarn redwood prisma migrate dev`
 // to create migrations for them and apply to your dev DB.
 // TODO: Please remove the following example:
